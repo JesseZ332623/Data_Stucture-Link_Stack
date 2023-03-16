@@ -12,3 +12,36 @@
 
 相比起顺序栈，链栈不依赖连续的内存空间，因此对内存的要求不会很高，但是会牺牲一点读写速度。
 
+----------------------------------------------------------------------------------------------------------------------------------
+一个链栈的数据结构如下所示：
+----------------------------------------------------------------------------------------------------------------------------------
+  #define STUDENT_COUNT 15       /*学生人数 15 人*/
+  #define NAME_LAN 10            /*姓名长度 10bytes*/
+  #define SUBJECT_COUNT 5        /*学科数量 5科*/
+
+  typedef double Element_Type; /*栈内的元素为 double类型*/
+
+  typedef struct Student_Information /*链栈结点的数据构成如下*/
+  {
+      char stu_name[NAME_LAN]; /*学生姓名 String*/
+
+      Element_Type stu_score[SUBJECT_COUNT]; /*学生成绩 Array*/
+
+  } _Stu_Info_;
+
+  typedef struct Linked_Stack_Node /*一个链栈的结点构成如下*/
+  {
+      _Stu_Info_ *node_data; /*结点数据*/
+
+      struct Linked_Stack_Node *next; /*结点指针，它指向了下一个结点*/
+
+  } _Linked_Stack_Node_; /*结构体别名*/
+
+  typedef struct Link_Stack /*一个链栈的结构如下*/
+  {
+      _Linked_Stack_Node_ *top_ptr; /*top指针*/
+
+      unsigned int length; /*链栈的长度*/
+
+  } _Link_Stack_;
+
