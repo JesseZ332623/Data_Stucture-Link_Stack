@@ -19,29 +19,29 @@
     #define NAME_LAN 10            /*姓名长度 10bytes*/
     #define SUBJECT_COUNT 5        /*学科数量 5科*/
 
-    typedef double Element_Type; /*栈内的元素为 double类型*/
+    typedef double Element_Type;                /*栈内的元素为 double类型*/
 
-    typedef struct Student_Information /*链栈结点的数据构成如下*/
+    typedef struct Student_Information          /*链栈结点的数据构成如下*/
     {
-        char stu_name[NAME_LAN]; /*学生姓名 String*/
+        char stu_name[NAME_LAN];                /*学生姓名 String*/
 
-        Element_Type stu_score[SUBJECT_COUNT]; /*学生成绩 Array*/
+        Element_Type stu_score[SUBJECT_COUNT];  /*学生成绩 Array*/
 
     } _Stu_Info_;
 
-    typedef struct Linked_Stack_Node /*一个链栈的结点构成如下*/
+    typedef struct Linked_Stack_Node            /*一个链栈的结点构成如下*/
     {
-        _Stu_Info_ *node_data; /*结点数据*/
+        _Stu_Info_ *node_data;                  /*结点数据*/
 
-        struct Linked_Stack_Node *next; /*结点指针，它指向了下一个结点*/
+        struct Linked_Stack_Node *next;         /*结点指针，它指向了下一个结点*/
 
-    } _Linked_Stack_Node_; /*结构体别名*/
+    } _Linked_Stack_Node_;                      /*结构体别名*/
 
-    typedef struct Link_Stack /*一个链栈的结构如下*/
+    typedef struct Link_Stack                   /*一个链栈的结构如下*/
     {
-        _Linked_Stack_Node_ *top_ptr; /*top指针*/
+        _Linked_Stack_Node_ *top_ptr;           /*top指针*/
 
-        unsigned int length; /*链栈的长度*/
+        unsigned int length;                    /*链栈的长度*/
 
     } _Link_Stack_;
 
