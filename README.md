@@ -17,8 +17,8 @@
 一个链栈的数据结构如下所示：
 ----------------------------------------------------------------------------------------------------------------------------------
     #define STUDENT_COUNT 15       /*学生人数 15 人*/
-    #define NAME_LAN 10            /*姓名长度 10bytes*/
-    #define SUBJECT_COUNT 5        /*学科数量 5科*/
+    #define NAME_LAN 10            /*姓名长度 10 bytes*/
+    #define SUBJECT_COUNT 5        /*学科数量 5 科*/
 
     typedef double Element_Type;                /*栈内的元素为 double类型*/
 
